@@ -11,6 +11,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import {WelcomeComponent} from "./welcome/welcome.component";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {FormsModule} from "@angular/forms";
+import {MatSidenavModule} from "@angular/material";
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import {FormsModule} from "@angular/forms";
         MaterialModule,
         AppRoutingModule,
         FlexLayoutModule,
-        FormsModule
+        FormsModule,
+        MatSidenavModule
     ],
     declarations: [
         AppComponent,
@@ -27,7 +29,6 @@ import {FormsModule} from "@angular/forms";
         LoginComponent,
         TrainingComponent,
         WelcomeComponent
-
     ],
     bootstrap: [ AppComponent ]
 })

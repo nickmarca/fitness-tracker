@@ -27,7 +27,13 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          { loader: 'css-loader', options: {
+                importLoaders: 1,
+                alias: {
+                  "../../fonts/roboto": "roboto-fontface/fonts/roboto"
+                }
+              }
+            },
           { loader: 'postcss-loader', options: {
               ident: 'postcss',
               plugins: loader => {
@@ -41,6 +47,13 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
       }
     ]
   },
