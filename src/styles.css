@@ -1,6 +1,11 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-@import 'roboto-fontface/css/roboto/roboto-fontface.css';
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+ }
 
 body {
   margin: 0;
